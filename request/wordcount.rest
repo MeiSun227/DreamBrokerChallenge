@@ -1,4 +1,4 @@
-POST http://localhost:3001/api/analyze 
+POST https://stark-brushlands-74320.herokuapp.com/api/analyze 
 content-type: application/json
 
 
