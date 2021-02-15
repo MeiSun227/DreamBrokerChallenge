@@ -15,12 +15,12 @@ app.post('/api/analyze', (request, response) => {
     const letterCount = letters.reduce((acc, value) => ({
         ...acc,
         [value]: (acc[value] || 0) + 1
-    }), {});
-    const arryObj = Object.entries(letterCount).map((e) => ({ [e[0]]: e[1] }));
+    }), {})
+    const arryObj = Object.entries(letterCount).map((e) => ({ [e[0]]: e[1] }))
 
 
     const newBody = ({
-        textLength: { "withSpaces": textLength, "withoutSpaces": textLengthNoSpace },
+        textLength: { 'withSpaces': textLength, 'withoutSpaces': textLengthNoSpace },
         wordCount: wordCount,
         letterCount: arryObj
     })
