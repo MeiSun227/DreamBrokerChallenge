@@ -3,8 +3,8 @@ name: Deployment pipeline
 on:
   push:
     branches:
-      - master
-      
+      - main
+
 jobs:
   pipeline:
     runs-on: ubuntu-18.04
