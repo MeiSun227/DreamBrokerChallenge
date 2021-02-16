@@ -9,12 +9,12 @@ app.post('/api/analyze', (request, response) => {
     let responseBody
     if (JSON.stringify(request.body) === JSON.stringify({})) {
         responseBody = {
-            "textLength": {
-                "withSpaces": 0,
-                "withoutSpaces": 0
+            'textLength': {
+                'withSpaces': 0,
+                'withoutSpaces': 0
             },
-            "wordCount": 0,
-            "characterCount": []
+            'wordCount': 0,
+            'characterCount': []
         }
     } else {
         const textLength = request.body['text'].length
