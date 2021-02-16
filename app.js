@@ -34,7 +34,7 @@ app.post('/api/analyze', (request, response) => {
         responseBody = ({
             textLength: { 'withSpaces': textLength, 'withoutSpaces': textLengthNoSpace },
             wordCount: wordCount,
-            letterCount: arryObj
+            characterCount: arryObj
         })
     }
 
