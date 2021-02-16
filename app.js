@@ -18,7 +18,7 @@ app.post('/api/analyze', (request, response) => {
         }
     } else {
         const textLength = request.body['text'].length
-        const textRemoveSpace = request.body['text'].replace(/\s+/g, '')
+        const textRemoveSpace = request.body['text'].toLowerCase().replace(/\s+/g, '')
         const textLengthNoSpace = textRemoveSpace.length
         const wordCount = request.body['text'].match(/\S+/g).length
         const letterRemoveNumber = textRemoveSpace.replace(/[0-9]/g, '')
