@@ -7,7 +7,7 @@ app.use(cors())
 
 app.post('/api/analyze', (request, response) => {
     let responseBody
-    if (JSON.stringify(request.body) === JSON.stringify({})) {
+    if (JSON.stringify(request.body) === JSON.stringify({}) || request.body['text'] === '') {
         responseBody = {
             'textLength': {
                 'withSpaces': 0,
